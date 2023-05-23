@@ -127,24 +127,15 @@ img {
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************
-/*SISTEMAZIONE LAYOUT*/
-
-@media screen and (max-width: 1160px) {
-
-    header, section {
-        width: 1160px;
-    }
-    
-}
 
 
-
+ 
 /*TABLET*/
 
- @media screen and (max-width: 768px) {
+ @media screen and (max-width: 1160px) {
 
         .container {
-            max-width: 768px;
+            width: 100%;
         }
  }
 
@@ -152,68 +143,29 @@ img {
 
 @media screen and (max-width: 480px) {
 
-        .container {
-            max-width: none;
-            padding: 20px;
+
+        .container .row {
+            flex-wrap: wrap;
         }
 
-        h1 {
-            font-size: 7em;
-        }
-
-        h2 {
-            font-size: 5em;
-            margin: 30px 0;
-        } 
-
-        h3 {
-            font-size: 4em;
-            margin: 30px 0;
-        }
-
-        p {
-            font-size: 3em;
-        }
-    
-        .row {
-            display: block;
-            text-align: center;
-        }
-
-        .lessons .col {
+        .container .col {
             width: 100%;
         }
 
-        .lessons .col img {
-            height: 100%;
-            width: 100%;
-        }
-
-        .steps .col {
-            width: 100%;
-        }
-
-        .steps .col img {
-            height: 100%;
-        }
-
-
-        .why-us .col-left {
-            width: 100%;
-        }
-
-        .why-us .col-right {
-            width: 100%;
-            text-align: left;
+        .col:not(:last-child)  {
+            margin-bottom: 3rem;
         }
 
         .why-us {
             background-color: black;
+            padding: 3rem 0;
         }
 
-        .col {
-            padding: 50px 30px;
-        }
+        .why-us,
+        .steps {
+            margin-bottom: 0;
+        } 
+
 }
 
 
